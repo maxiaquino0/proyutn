@@ -11,7 +11,9 @@
 	<br>
 	<a href='agregar_producto.php'>Agregar Producto</a>
 	<br>
-	<a href='registrar_usuario.php'>Registrar Usuarios</a>
+	<a href='listar_usuarios.php'>Listar Usuarios</a>
+	<br>
+	<a href='agregar_usuario.php'>Agregar Usuarios</a>
 </body>
 </html>
 
