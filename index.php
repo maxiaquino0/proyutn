@@ -5,6 +5,7 @@
 	<title>Pantalla de inicio</title>
 </head>
 <body>
+	<h1>Sistema ProyUTN</h1>
 	<a href='listar_productos.php'>Listar Productos</a>
 	<br>
 	<a href='agregar_producto.php'>Agregar Producto</a>
