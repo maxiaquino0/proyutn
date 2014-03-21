@@ -1,13 +1,14 @@
 <?php
 	require_once 'core/init.php';
+	//esto es para que un usuario no logueado vea el archivo.!!
+	if (!Session::exists("loginTrue") OR !Session::get("loginTrue") ){
+		//Session::logout();
+		Session::flash("no","Aca hackersito anda a tomar mate!!");
 
-	//$productos = DB::getInstance()->get('productos')->results();
-	$sql = "SELECT u.id, u.usuario, u.clave, u.privilegio, u.token
-			FROM usuarios as u
-			ORDER BY u.id DESC
-			";
+		header("Location: login.php");
+	}
 
-	$usuarios = DB::getInstance()->consultar($sql,array())->results();
+	$usuarios = DB::getInstance()->get("usuarios")->results();
 
 
 	/*foreach ($productos as $row) {

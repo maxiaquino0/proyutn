@@ -1,3 +1,17 @@
+<?php
+	require_once 'core/init.php';
+
+	if (!Session::exists("loginTrue") OR !Session::get("loginTrue") ){
+		Session::logout();
+		header("Location: login.php");
+	}
+
+	if (Session::exists("ok")) {
+		echo Session::flash("ok");
+	}
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,6 +28,8 @@
 	<a href='listar_usuarios.php'>Listar Usuarios</a>
 	<br>
 	<a href='agregar_usuario.php'>Agregar Usuarios</a>
+	<br>
+	<a href="salir.php">Salir</a>
 </body>
 </html>
 

@@ -1,6 +1,14 @@
 <?php
 	require_once 'core/init.php';
 
+	//esto es para que un usuario no logueado vea el archivo.!!
+	if (!Session::exists("loginTrue") OR !Session::get("loginTrue") ){
+		//Session::logout();
+		Session::flash("no","Aca hackersito anda a tomar mate!!");
+
+		header("Location: login.php");
+	}
+
 	$bto = $_POST["btoUsuario"];
 	if (!empty($bto) and $bto == "Agregar") {
 		//esta funcion me trae todos los valores ingresado por el post en variables $name del formulario html

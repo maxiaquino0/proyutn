@@ -1,4 +1,6 @@
 <?php
+//se lo incluye aqui para se cargue en cada uno los archivos.php
+session_start();
  
 define('URL_BASE','http://localhost/proyutn/');
  

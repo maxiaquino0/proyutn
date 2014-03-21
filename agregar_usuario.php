@@ -1,7 +1,13 @@
 <?php
 	require_once 'core/init.php';
 
-	//$categorias = DB::getInstance()->get('categorias')->results();
+	//esto es para que un usuario no logueado vea el archivo.!!
+	if (!Session::exists("loginTrue") OR !Session::get("loginTrue") ){
+		//Session::logout();
+		Session::flash("no","Aca hackersito anda a tomar mate!!");
+
+		header("Location: login.php");
+	}
 ?>
 
 <form action="procesar_usuario.php" method="post">
