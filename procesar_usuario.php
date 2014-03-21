@@ -19,7 +19,7 @@
 			)";
 
 		$query = DB::getInstance()->consultar($sql, array(
-				$usuario,$clave,$privilegio,$token
+				$usuario,sha1($clave),$privilegio,$token
 			));
 		
 		if ($query->error()) {
@@ -37,11 +37,11 @@
 					usuario = ?,
 					clave = ?,
 					privilegio = ?,
-					token = ?,
+					token = ?
 				WHERE id = ?
 			";
 		$query = DB::getInstance()->consultar($sql, array(
-				$usuario,$clave,$privilegio,$token,$id_usuario
+				$usuario,sha1($clave),$privilegio,$token,$id_usuario
 			));
 	
 		if ($query->error()) {

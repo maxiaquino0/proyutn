@@ -21,7 +21,7 @@
 	<input type="hidden" name="id_usuario" value="<?php echo $usuario[0]->id ?>">
 	<br>
 	Usuario: <br>
-	<input type="text" name="id_usuario" value="<?php echo $usuario[0]->usuario?>">
+	<input type="text" name="usuario" value="<?php echo $usuario[0]->usuario?>">
 	<br>
 	Clave: <br>
 	<input type="text" name="clave" value="<?php echo $usuario[0]->clave ?>"/>
