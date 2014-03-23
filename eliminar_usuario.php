@@ -11,7 +11,7 @@
 
 	$id = $_GET["id"];
 	if (!empty($id)) {
-		$sql = "DELETE FROM usuario WHERE id = ?";
+		$sql = "DELETE FROM usuarios WHERE id = ?";
 		$query = DB::getInstance()->consultar($sql, array($id));
 		if ($query->error) {
 			//error
