@@ -27,9 +27,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Pantalla de inicio</title>
+	<title>Listar Usuarios</title>
 </head>
-<body>
+<body bgcolor="silver">
 	<a href='index.php'>Inicio</a>
 	<br>
 	<a href='agregar_usuario.php'>Agregar Usuario</a>

@@ -11,16 +11,26 @@
 	}
 
 ?>
-
-<h2>Login</h2>
-<br>
-<form action="procesar_login.php" method="post">
-	<label for="">Usuario</label>
-	<input type="text" name="usuario">
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema ProyUTN</title>
+</head>
+<body bgcolor="silver">
+	<h1>Sistema ProyUTN</h1>
+	<br><br>
+	<h2>Login</h2>
 	<br>
-	<label for="">Clave</label>
-	<input type="password" name="clave">
-	<br>
-	<input type="submit" name="btoLogin"> 
+	<form action="procesar_login.php" method="post">
+		<label for="">Usuario</label>
+		<input type="text" name="usuario">
+		<br>
+		<label for="">Clave</label>
+		<input type="password" name="clave">
+		<br>
+		<input type="submit" name="btoLogin"> 
 	
-</form>
+	</form>
+</body>
+</html>

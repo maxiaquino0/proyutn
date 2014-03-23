@@ -18,7 +18,7 @@
 	<meta charset="UTF-8">
 	<title>Pantalla de inicio</title>
 </head>
-<body>
+<body bgcolor="silver">
 	<h1>Sistema ProyUTN</h1>
 	<h2>Un ABM de productos</h2>
 	<a href='listar_productos.php'>Listar Productos</a>

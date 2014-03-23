@@ -34,9 +34,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Pantalla de inicio</title>
+	<title>Listar Productos</title>
 </head>
-<body>
+<body bgcolor="silver">
 	<a href='index.php'>Inicio</a>
 	<br>
 	<a href='agregar_producto.php'>Agregar Producto</a>
@@ -49,6 +49,7 @@
 		<tr>
 			<th>Identificador</th>
 			<th>Producto</th>
+			<th>Cantidad</th>
 			<th>Precio</th>
 			<th>Categoria</th>
 		</tr>

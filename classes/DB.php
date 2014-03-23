@@ -24,7 +24,7 @@ class DB{
 	//algoritmo de singlenton, buscar bien sobre esto##########
 	public static function getInstance(){
 		if ( !isset(self::$_instance) ) {
-			//si no existe, el isset me devuelve falso, pero con el 1 me lo convierte a true
+			//si no existe, el isset me devuelve falso, pero con el ! me lo convierte a true
 			self::$_instance = new DB();
 		}
 		return self::$_instance;
