@@ -32,4 +32,3 @@
 	<a href="salir.php">Salir</a>
 </body>
 </html>
-

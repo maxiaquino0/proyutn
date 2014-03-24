@@ -3,7 +3,6 @@
 
 	//esto es para que un usuario no logueado vea el archivo.!!
 	if (!Session::exists("loginTrue") OR !Session::get("loginTrue") ){
-		//Session::logout();
 		Session::flash("no","Aca hackersito anda a tomar mate!!");
 
 		header("Location: login.php");
@@ -56,6 +55,5 @@
 	}else{
 		echo "No se mandaron datos para insertar";
 	}
-
 
 ?>

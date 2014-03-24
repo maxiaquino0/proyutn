@@ -3,7 +3,6 @@
 
 	//esto es para que un usuario no logueado vea el archivo.!!
 	if (!Session::exists("loginTrue") OR !Session::get("loginTrue") ){
-		//Session::logout();
 		Session::flash("no","Aca hackersito anda a tomar mate!!");
 
 		header("Location: login.php");
@@ -16,7 +15,9 @@
 			";
 	$producto = DB::getInstance()->consultar($sql, array($id))->
 			results();
+
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>

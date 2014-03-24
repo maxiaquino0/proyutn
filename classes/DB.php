@@ -1,10 +1,4 @@
 <?php
-/*
-define("HOST","localhost");
-define("USER","root");
-define("PASS","");
-define("DBNAME","proyutn");
-*/
 
 class DB{
 	private $_pdo,
@@ -32,7 +26,7 @@ class DB{
 
 
 	public function consultar($sql,  $params = array()){
-		//return $this->_pdo->query($sql);
+		
 	
 		if( $this->_query = $this->_pdo->prepare($sql) ){
 			$x =1;
@@ -76,61 +70,5 @@ class DB{
 	}
 
 }//fin de la clase
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//$db = new DB();
-/*
-$db = DB::getInstance()->get("usuarios")->results();
-
-foreach ($db as $row) {
-	echo "Mi usuario es " . $row->usuario . "<br>";
-}
-*/
-
-
-//$sql = "SELECT * FROM usuarios WHERE usuario = ? AND clave =?";
-
-//$db->consultar($sql,array('lodeale', sha1('123456')));
-//if ($db->count() > 0) {
-//	echo "El usuario existe";
-//}else{
-//	echo "El usuario no existe";
-//}
-
-
-//foreach ($db->results() as $row) {
-//	echo "Mi usuario es " . $row->usuario . "<br>";
-//}
-
-
-//$row = $result->fetch(PDO::FETCH_ASSOC);
-//echo "El usuario es " . $row["usuario"];
-//echo "<br>";
-//echo "La clave es " . $row["clave"];
 
 ?>

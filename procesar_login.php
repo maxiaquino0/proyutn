@@ -15,8 +15,6 @@
 
 		if ($query->count() == 1) {
 			$user = $query->first();
-			//$_SESSION["usuario"] = $user->usuario;
-			//$_SESSION["id"] = $user->id;
 			//Para trabajar con la clase session creada se hace lo siguiente
 			Session::put("usuario",$user->usuario);
 			Session::put("id",$user->id);

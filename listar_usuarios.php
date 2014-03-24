@@ -2,7 +2,6 @@
 	require_once 'core/init.php';
 	//esto es para que un usuario no logueado vea el archivo.!!
 	if (!Session::exists("loginTrue") OR !Session::get("loginTrue") ){
-		//Session::logout();
 		Session::flash("no","Aca hackersito anda a tomar mate!!");
 
 		header("Location: login.php");
@@ -10,17 +9,6 @@
 
 	$usuarios = DB::getInstance()->get("usuarios")->results();
 
-
-	/*foreach ($productos as $row) {
-		echo "Producto: " . $row->producto;
-		echo "<br>Cantidad: " . $row->cantidad;
-		echo "<br>Precio: " . $row->precio;
-		echo "<br>Identificador: " . $row->id;
-		echo "<br>Categoria: " . $row->descripcion;
-		echo "<hr>";
-
-	}
-	*/
 ?>
 
 <!doctype html>

@@ -2,13 +2,11 @@
 	require_once 'core/init.php';
 
 	if (!Session::exists("loginTrue") OR !Session::get("loginTrue") ){
-		//Session::logout();
 		Session::flash("no","Aca hackersito anda a tomar mate!!");
 
 		header("Location: login.php");
 	}
 
-	//$productos = DB::getInstance()->get('productos')->results();
 	$sql = "SELECT p.id, p.producto, p.cantidad, p.precio, p.imagen, c.descripcion 
 			FROM productos as p, categorias as c
 			WHERE p.id_categoria = c.id
@@ -17,17 +15,6 @@
 
 	$productos = DB::getInstance()->consultar($sql,array())->results();
 
-
-	/*foreach ($productos as $row) {
-		echo "Producto: " . $row->producto;
-		echo "<br>Cantidad: " . $row->cantidad;
-		echo "<br>Precio: " . $row->precio;
-		echo "<br>Identificador: " . $row->id;
-		echo "<br>Categoria: " . $row->descripcion;
-		echo "<hr>";
-
-	}
-	*/
 ?>
 
 <!doctype html>
